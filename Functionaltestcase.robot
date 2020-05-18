@@ -116,9 +116,9 @@ To validate check count response
     Call Method    ${chrome_options}   add_argument    disable-gpu
     Call Method    ${chrome_options}   add_argument    no-sandbox
     SeleniumLibrary.Create WebDriver  Chrome  chrome_options=${chrome_options}
-	SeleniumLibrary.Set Window Size    1920    1080
+    SeleniumLibrary.Set Window Size    1920    1080
     SeleniumLibrary.Go to    ${url} 
-	SeleniumLibrary.Set Selenium Implicit Wait    60s
+    SeleniumLibrary.Set Selenium Implicit Wait    60s
     SeleniumLibrary.Wait Until Element Is Enabled    //div[@class='login-footertxt']/p    
     SeleniumLibrary.Input Text    id=form_username    testpurpose
     SeleniumLibrary.Input Text    id=form_password    testpurpose
