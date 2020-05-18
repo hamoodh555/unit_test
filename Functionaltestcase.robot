@@ -5,6 +5,7 @@ Library           SeleniumLibrary
 ${url}            http://webdev.xerago.com/cvm
 ${browser}        chrome
 
+*** Test Cases ***
 Valid credential
     #Creator Login
     ${chrome_options} =     Evaluate    sys.modules['selenium.webdriver'].ChromeOptions()    sys, selenium.webdriver
