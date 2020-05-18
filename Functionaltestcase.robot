@@ -21,7 +21,7 @@ To validate all login function at all levels
     SeleniumLibrary.Input Text    id=form_password    testpurpose
     SeleniumLibrary.Click Button    id=form_login
     #Check after login home page display or not
-    SeleniumLibrary.Element Should Be Visible    xpath=.//span[@class='logo replacea']/img
+    SeleniumLibrary.Wait Until Page Contains Element    xpath=.//span[@class='logo replacea']/img
     SeleniumLibrary.Close Browser
 
 	#Admin Login
@@ -38,7 +38,7 @@ To validate all login function at all levels
     SeleniumLibrary.Input Text    id=form_password    admins@123
     SeleniumLibrary.Click Button    id=form_login
 	#Check after login home page display or not
-    SeleniumLibrary.Element Should Be Visible    xpath=.//span[@class='logo replacea']/img
+    SeleniumLibrary.Wait Until Page Contains Element    xpath=.//span[@class='logo replacea']/img
     SeleniumLibrary.Close Browser
 	
     #Reviewer Login
@@ -55,7 +55,7 @@ To validate all login function at all levels
     SeleniumLibrary.Input Text    id=form_password    reviewers@123
     SeleniumLibrary.Click Button    id=form_login
 	#Check after login home page display or not
-    SeleniumLibrary.Element Should Be Visible    xpath=.//span[@class='logo replacea']/img
+    SeleniumLibrary.Wait Until Page Contains Element    xpath=.//span[@class='logo replacea']/img
     SeleniumLibrary.Close Browser
 	
 	#Admin Creator Login
@@ -72,7 +72,7 @@ To validate all login function at all levels
     SeleniumLibrary.Input Text    id=form_password    CreatorAdmin123
     SeleniumLibrary.Click Button    id=form_login
 	#Check after login home page display or not
-    SeleniumLibrary.Element Should Be Visible    xpath=.//span[@class='logo replacea']/img
+    SeleniumLibrary.Wait Until Page Contains Element    xpath=.//span[@class='logo replacea']/img
     SeleniumLibrary.Close Browser
 	
     #compliancehead Login
@@ -89,7 +89,7 @@ To validate all login function at all levels
     SeleniumLibrary.Input Text    id=form_password    compliancehead
     SeleniumLibrary.Click Button    id=form_login
 	#Check after login home page display or not
-    SeleniumLibrary.Element Should Be Visible    xpath=.//span[@class='logo replacea']/img
+    SeleniumLibrary.Wait Until Page Contains Element    xpath=.//span[@class='logo replacea']/img
     SeleniumLibrary.Close Browser
 
     #Creatorhead Login
@@ -106,7 +106,7 @@ To validate all login function at all levels
     SeleniumLibrary.Input Text    id=form_password    creatorhead
     SeleniumLibrary.Click Button    id=form_login
 	#Check after login home page display or not
-    SeleniumLibrary.Element Should Be Visible    xpath=.//span[@class='logo replacea']/img
+    SeleniumLibrary.Wait Until Page Contains Element    xpath=.//span[@class='logo replacea']/img
     SeleniumLibrary.Close Browser
 	
 To validate check count response	
