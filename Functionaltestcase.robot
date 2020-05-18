@@ -123,7 +123,7 @@ To validate check count response
     SeleniumLibrary.Input Text    id=form_username    testpurpose
     SeleniumLibrary.Input Text    id=form_password    testpurpose
     SeleniumLibrary.Click Button    id=form_login
-    SeleniumLibrary.Wait Until Element Is Enabled    xpath=.//li[@ng-click='createNewProgram()']    
+    SeleniumLibrary.Wait Until Page Contains Element    xpath=.//li[@ng-click='createNewProgram()']    
     SeleniumLibrary.Click Element    xpath=.//li[@ng-click='createNewProgram()']
     SeleniumLibrary.Wait Until Element Is Enabled    xpath=.//div[@id='productName'][contains(.,'Savings Accounts')]    
     SeleniumLibrary.Click Element    xpath=.//div[@id='productName'][contains(.,'Savings Accounts')]
