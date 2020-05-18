@@ -6,7 +6,7 @@ ${url}            http://webdev.xerago.com/cvm
 ${browser}        chrome
 
 *** Test Cases ***
-Valid credential
+To validate all login function at all levels
     #Creator Login
     ${chrome_options} =     Evaluate    sys.modules['selenium.webdriver'].ChromeOptions()    sys, selenium.webdriver
     Call Method    ${chrome_options}   add_argument    headless
@@ -20,8 +20,8 @@ Valid credential
     SeleniumLibrary.Input Text    id=form_username    testpurpose
     SeleniumLibrary.Input Text    id=form_password    testpurpose
     SeleniumLibrary.Click Button    id=form_login
-	#Check after login home page display or not
-    SeleniumLibrary.Element Should Be Visible    xpath=.//*[@id='homeadmin']
+    #Check after login home page display or not
+    SeleniumLibrary.Element Should Be Visible    xpath=.//span[@class='logo replacea']/img
     SeleniumLibrary.Close Browser
 
 	#Admin Login
@@ -38,7 +38,7 @@ Valid credential
     SeleniumLibrary.Input Text    id=form_password    admins@123
     SeleniumLibrary.Click Button    id=form_login
 	#Check after login home page display or not
-    SeleniumLibrary.Element Should Be Visible    xpath=.//*[@id='homeadmin']
+    SeleniumLibrary.Element Should Be Visible    xpath=.//span[@class='logo replacea']/img
     SeleniumLibrary.Close Browser
 	
     #Reviewer Login
@@ -55,7 +55,7 @@ Valid credential
     SeleniumLibrary.Input Text    id=form_password    reviewers@123
     SeleniumLibrary.Click Button    id=form_login
 	#Check after login home page display or not
-    SeleniumLibrary.Element Should Be Visible    xpath=.//*[@id='homeadmin']
+    SeleniumLibrary.Element Should Be Visible    xpath=.//span[@class='logo replacea']/img
     SeleniumLibrary.Close Browser
 	
 	#Admin Creator Login
@@ -72,7 +72,7 @@ Valid credential
     SeleniumLibrary.Input Text    id=form_password    CreatorAdmin123
     SeleniumLibrary.Click Button    id=form_login
 	#Check after login home page display or not
-    SeleniumLibrary.Element Should Be Visible    xpath=.//*[@id='homeadmin']
+    SeleniumLibrary.Element Should Be Visible    xpath=.//span[@class='logo replacea']/img
     SeleniumLibrary.Close Browser
 	
     #compliancehead Login
@@ -89,7 +89,7 @@ Valid credential
     SeleniumLibrary.Input Text    id=form_password    compliancehead
     SeleniumLibrary.Click Button    id=form_login
 	#Check after login home page display or not
-    SeleniumLibrary.Element Should Be Visible    xpath=.//*[@id='homeadmin']
+    SeleniumLibrary.Element Should Be Visible    xpath=.//span[@class='logo replacea']/img
     SeleniumLibrary.Close Browser
 
     #Creatorhead Login
@@ -106,10 +106,10 @@ Valid credential
     SeleniumLibrary.Input Text    id=form_password    creatorhead
     SeleniumLibrary.Click Button    id=form_login
 	#Check after login home page display or not
-    SeleniumLibrary.Element Should Be Visible    xpath=.//*[@id='homeadmin']
+    SeleniumLibrary.Element Should Be Visible    xpath=.//span[@class='logo replacea']/img
     SeleniumLibrary.Close Browser
 	
-To create a new campaign by manual flow	
+To validate check count response	
     
     ${chrome_options} =     Evaluate    sys.modules['selenium.webdriver'].ChromeOptions()    sys, selenium.webdriver
     Call Method    ${chrome_options}   add_argument    headless
@@ -141,4 +141,4 @@ To create a new campaign by manual flow
     SeleniumLibrary.Execute JavaScript    window.scrollTo(0, document.body.scrollHeight)
     SeleniumLibrary.Wait Until Page Contains Element    xpath=.//div[@ng-show='showRecordCount']    
     SeleniumLibrary.Wait Until Page Contains Element    xpath=.//div[@ng-repeat='collection in productPercentage'][2]    
-	SeleniumLibrary.Close Browser
+    SeleniumLibrary.Close Browser
