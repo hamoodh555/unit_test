@@ -20,8 +20,7 @@ To validate check count response
     SeleniumLibrary.Input Text    id=form_username    testpurpose
     SeleniumLibrary.Input Text    id=form_password    testpurpose
     SeleniumLibrary.Click Button    id=form_login
-    SeleniumLibrary.Wait Until Page Contains Element    xpath=.//li[@ng-click='createNewProgram()']     50s 
-    Sleep     30s
+    SeleniumLibrary.Wait Until Element Is Visible    xpath=.//span[@class='logo replacea']/img    timeout=50    error=false
     SeleniumLibrary.Click Element    xpath=.//li[@ng-click='createNewProgram()']
     SeleniumLibrary.Wait Until Element Is Enabled    xpath=.//div[@id='productName'][contains(.,'Savings Accounts')]    
     SeleniumLibrary.Click Element    xpath=.//div[@id='productName'][contains(.,'Savings Accounts')]
@@ -56,7 +55,7 @@ To validate all login function at all levels
     SeleniumLibrary.Input Text    id=form_password    testpurpose
     SeleniumLibrary.Click Button    id=form_login
     #Check after login home page display or not
-    SeleniumLibrary.Wait Until Page Contains Element    xpath=.//span[@class='logo replacea']/img
+    SeleniumLibrary.Wait Until Element Is Visible    xpath=.//span[@class='logo replacea']/img    timeout=50    error=false
     SeleniumLibrary.Close Browser
 
 	#Admin Login
@@ -73,7 +72,7 @@ To validate all login function at all levels
     SeleniumLibrary.Input Text    id=form_password    admins@123
     SeleniumLibrary.Click Button    id=form_login
 	#Check after login home page display or not
-    SeleniumLibrary.Wait Until Page Contains Element    xpath=.//span[@class='logo replacea']/img
+    SeleniumLibrary.Wait Until Element Is Visible    xpath=.//span[@class='logo replacea']/img    timeout=50    error=false
     SeleniumLibrary.Close Browser
 	
     #Reviewer Login
@@ -90,7 +89,7 @@ To validate all login function at all levels
     SeleniumLibrary.Input Text    id=form_password    reviewers@123
     SeleniumLibrary.Click Button    id=form_login
 	#Check after login home page display or not
-    SeleniumLibrary.Wait Until Page Contains Element    xpath=.//span[@class='logo replacea']/img
+    SeleniumLibrary.Wait Until Element Is Visible    xpath=.//span[@class='logo replacea']/img    timeout=50    error=false
     SeleniumLibrary.Close Browser
 	
 	#Admin Creator Login
@@ -107,7 +106,7 @@ To validate all login function at all levels
     SeleniumLibrary.Input Text    id=form_password    CreatorAdmin123
     SeleniumLibrary.Click Button    id=form_login
 	#Check after login home page display or not
-    SeleniumLibrary.Wait Until Page Contains Element    xpath=.//span[@class='logo replacea']/img
+    SeleniumLibrary.Wait Until Element Is Visible    xpath=.//span[@class='logo replacea']/img    timeout=50    error=false
     SeleniumLibrary.Close Browser
 	
     #compliancehead Login
@@ -124,7 +123,7 @@ To validate all login function at all levels
     SeleniumLibrary.Input Text    id=form_password    compliancehead
     SeleniumLibrary.Click Button    id=form_login
 	#Check after login home page display or not
-    SeleniumLibrary.Wait Until Page Contains Element    xpath=.//span[@class='logo replacea']/img
+    SeleniumLibrary.Wait Until Element Is Visible    xpath=.//span[@class='logo replacea']/img    timeout=50    error=false
     SeleniumLibrary.Close Browser
 
     #Creatorhead Login
@@ -141,5 +140,5 @@ To validate all login function at all levels
     SeleniumLibrary.Input Text    id=form_password    creatorhead
     SeleniumLibrary.Click Button    id=form_login
 	#Check after login home page display or not
-    SeleniumLibrary.Wait Until Page Contains Element    xpath=.//span[@class='logo replacea']/img
+    SeleniumLibrary.Wait Until Element Is Visible    xpath=.//span[@class='logo replacea']/img    timeout=50    error=false
     SeleniumLibrary.Close Browser
